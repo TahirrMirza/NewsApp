@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
     padding: 20,
     borderBottomWidth: 2,
     borderBottomColor: colors.lightgray,
-    // justifyContent: 'space-between',
+    gap: 10,
   },
   textContainer: {
-    width: '68%',
+    width: '65%',
   },
   titleStyle: {
     fontSize: 16,

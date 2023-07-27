@@ -1,11 +1,28 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, FlatList} from 'react-native';
 import styles from './styles';
+import {useSelector} from 'react-redux';
+import NewsTile from '../../components/NewsTile';
 
-const NationalNews = () => {
+const NationalNews = ({navigation}) => {
+  const {nationalNewsResults} = useSelector(state => state.Reducer);
+
+  const renderItem = ({item}) => (
+    <NewsTile
+      navigation={navigation}
+      title={item.title}
+      imgUri={item.image}
+      pageUrl={item.url}
+    />
+  );
+
   return (
     <View style={styles.container}>
-      <Text>NationalNews</Text>
+      <FlatList
+        data={nationalNewsResults.articles}
+        keyExtractor={(_, index) => index.toString()}
+        renderItem={renderItem}
+      />
     </View>
   );
 };

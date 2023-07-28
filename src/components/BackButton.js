@@ -7,7 +7,7 @@ const BackButton = ({onPress, title}) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPress}>
-        <Back name="arrow-back" size={25} />
+        <Back name="arrow-back" size={35} />
       </TouchableOpacity>
       <Text style={styles.text}>{title}</Text>
     </View>
@@ -16,7 +16,7 @@ const BackButton = ({onPress, title}) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 40,
+    height: 70,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,

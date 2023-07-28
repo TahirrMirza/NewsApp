@@ -26,7 +26,7 @@ export const getSearchResults = text => {
       const results = await axios(config);
       dispatch({
         type: SEARCH_RESULTS,
-        payload: results.data,
+        payload: results.data.articles,
       });
     } catch (error) {
       console.log(error);
@@ -49,7 +49,7 @@ export const getBreakingNews = () => {
       const results = await axios(config);
       dispatch({
         type: BREAKING_NEWS_RESULTS,
-        payload: results.data,
+        payload: results.data.articles,
       });
     } catch (error) {
       console.log(error);
@@ -72,7 +72,7 @@ export const getNationalNews = () => {
       const results = await axios(config);
       dispatch({
         type: NATIONAL_NEWS_RESULTS,
-        payload: results.data,
+        payload: results.data.articles,
       });
     } catch (error) {
       console.log(error);
@@ -95,7 +95,7 @@ export const getInternationalNews = () => {
       const results = await axios(config);
       dispatch({
         type: INTERNATIONAL_NEWS_RESULTS,
-        payload: results.data,
+        payload: results.data.articles,
       });
     } catch (error) {
       console.log(error);

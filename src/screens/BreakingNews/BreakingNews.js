@@ -19,7 +19,7 @@ const BreakingNews = ({navigation}) => {
   return (
     <View style={styles.container}>
       <FlatList
-        data={breakingNewsResults.articles}
+        data={breakingNewsResults}
         keyExtractor={(_, index) => index.toString()}
         renderItem={renderItem}
       />

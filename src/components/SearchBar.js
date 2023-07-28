@@ -15,7 +15,6 @@ const SearchBar = () => {
 const styles = StyleSheet.create({
   container: {
     width: '90%',
-    height: 35,
     backgroundColor: colors.lightgray,
     borderRadius: 10,
     paddingHorizontal: 10,

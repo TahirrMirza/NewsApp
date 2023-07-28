@@ -33,7 +33,6 @@ const NewsTile = ({imgUri, pageUrl, title, navigation}) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: 120,
     flexDirection: 'row',
     alignItems: 'center',
     padding: 20,

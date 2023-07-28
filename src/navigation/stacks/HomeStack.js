@@ -5,12 +5,17 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {BOTTOM_TABS, HOME, NEWS_DETAILS, TOP_TABS} from '../routes/routes';
 import BottomTabStack from './BottomTabStack';
 import {useDispatch} from 'react-redux';
+// import {
+//   getBreakingNews,
+//   getInternationalNews,
+//   getNationalNews,
+// } from '../../redux/actions';
+import NewsDetails from '../../screens/NewsDetails/NewsDetails';
 import {
   getBreakingNews,
   getInternationalNews,
   getNationalNews,
-} from '../../redux/actions';
-import NewsDetails from '../../screens/NewsDetails/NewsDetails';
+} from '../../redux/features/newsSlice';
 
 const Stack = createNativeStackNavigator();
 

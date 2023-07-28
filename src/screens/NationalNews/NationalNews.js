@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import NewsTile from '../../components/NewsTile';
 
 const NationalNews = ({navigation}) => {
-  const {nationalNewsResults} = useSelector(state => state.Reducer);
+  const {nationalNewsResults} = useSelector(state => state.news);
 
   const renderItem = ({item}) => (
     <NewsTile

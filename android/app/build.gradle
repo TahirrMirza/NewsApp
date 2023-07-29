@@ -89,6 +89,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+      storeFile file('newsapp.keystore')
+      storePassword 'newsapp'
+      keyAlias 'newsapp'
+      keyPassword 'newsapp'
+    }
     }
     buildTypes {
         debug {

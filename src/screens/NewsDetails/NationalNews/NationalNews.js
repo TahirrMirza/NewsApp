@@ -2,10 +2,10 @@ import React from 'react';
 import {View, FlatList} from 'react-native';
 import styles from './styles';
 import {useSelector} from 'react-redux';
-import NewsTile from '../../components/NewsTile';
-import ErrorMessage from '../../components/ErrorMessage';
-import {getNationalNews} from '../../redux/features/newsSlice';
-import Loading from '../../components/Loading';
+import NewsTile from '../../../components/NewsTile';
+import ErrorMessage from '../../../components/ErrorMessage';
+import {getNationalNews} from '../../../redux/features/newsSlice';
+import Loading from '../../../components/Loading';
 
 const NationalNews = ({navigation}) => {
   const {nationalNewsResults, nationalNewsResultsFailed, loading} = useSelector(

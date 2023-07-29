@@ -5,7 +5,7 @@ import {
   NATIONAL_NEWS,
 } from '../routes/routes';
 import BreakingNews from '../../screens/BreakingNews/BreakingNews';
-import NationalNews from '../../screens/NationalNews/NationalNews';
+import NationalNews from '../../screens/NewsDetails/NationalNews/NationalNews';
 import InterNationalNews from '../../screens/InternationalNews/InternationalNews';
 import Header from '../../components/Header';
 import {colors} from '../../assets/colors';

@@ -5,4 +5,9 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  messageStyle: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

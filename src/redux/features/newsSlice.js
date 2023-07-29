@@ -25,7 +25,6 @@ export const getSearchResults = createAsyncThunk(
         const query = {
           q: text,
           lang: 'en',
-          max: 50,
           in: 'title,description,content',
           sortby: 'publishedAt',
         };
@@ -52,7 +51,6 @@ export const getBreakingNews = createAsyncThunk(
       if (state.isConnected) {
         const query = {
           lang: 'en',
-          max: 50,
           country: 'in',
         };
         const config = {
@@ -79,7 +77,6 @@ export const getNationalNews = createAsyncThunk(
         const query = {
           category: 'nation',
           lang: 'en',
-          max: 50,
           country: 'in',
         };
         const config = {
@@ -106,7 +103,6 @@ export const getInternationalNews = createAsyncThunk(
         const query = {
           category: 'world',
           lang: 'en',
-          max: 50,
           country: 'gb',
         };
         const config = {

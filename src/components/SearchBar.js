@@ -3,11 +3,18 @@ import {View, Text, StyleSheet, TextInput} from 'react-native';
 import {colors} from '../assets/colors';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
-const SearchBar = () => {
+const SearchBar = ({onEndEditing, value, onChangeText}) => {
   return (
     <View style={styles.container}>
       <FeatherIcon name="search" size={20} />
-      <TextInput style={styles.input} placeholder="Search" />
+      <TextInput
+        onEndEditing={onEndEditing}
+        returnKeyType="done"
+        style={styles.input}
+        value={value}
+        placeholder="Search"
+        onChangeText={onChangeText}
+      />
     </View>
   );
 };

@@ -1,4 +1,4 @@
 export const Images = {
-  AppLogo: require('./AppLogo.png'),
-  Placeholder: require('./placeholder.png'),
+  AppLogo: require('./AppLogo.jpg'),
+  Placeholder: require('./placeholder.jpg'),
 };

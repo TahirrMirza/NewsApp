@@ -32,12 +32,14 @@ const BreakingNews = ({navigation}) => {
         <Loading />
       ) : breakingNewsResultsFailed ? (
         <ErrorMessage text={breakingNewsResultsFailed} onPress={Retry} />
-      ) : (
+      ) : breakingNewsResults ? (
         <FlatList
           data={breakingNewsResults}
           keyExtractor={(_, index) => index.toString()}
           renderItem={renderItem}
         />
+      ) : (
+        <Text>No Results Found</Text>
       )}
     </View>
   );

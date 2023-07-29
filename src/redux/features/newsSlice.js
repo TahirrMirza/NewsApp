@@ -25,7 +25,7 @@ export const getSearchResults = createAsyncThunk(
         const query = {
           q: text,
           lang: 'en',
-          in: 'title,description,content',
+          in: 'title',
           sortby: 'publishedAt',
         };
         const config = {

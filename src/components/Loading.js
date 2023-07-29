@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, ActivityIndicator} from 'react-native';
 
 const Loading = () => {
-  return <Text>Loading...</Text>;
+  return <ActivityIndicator animating={true} size={'small'} />;
 };
 
 export default Loading;

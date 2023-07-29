@@ -1,6 +1,5 @@
-//import liraries
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, FlatList} from 'react-native';
 import styles from './styles';
 import SearchBar from '../../components/SearchBar';
 import Seperator from '../../components/Seperator';
@@ -54,12 +53,16 @@ const Search = ({navigation}) => {
         <View style={styles.messageStyle}>
           <ErrorMessage text={searchResultsFailed} onPress={Retry} />
         </View>
-      ) : (
+      ) : searchResults.length !== 0 ? (
         <FlatList
           data={searchResults}
           keyExtractor={(_, index) => index.toString()}
           renderItem={renderItem}
         />
+      ) : (
+        <View style={styles.messageStyle}>
+          <Text>No Results Found</Text>
+        </View>
       )}
     </View>
   );

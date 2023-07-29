@@ -23,3 +23,5 @@ npm run android
 ```bash
 npm run ios
 ```
+
+Refer to scripts in package.json for more scripts

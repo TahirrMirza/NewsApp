@@ -3,9 +3,18 @@ import {View, FlatList} from 'react-native';
 import styles from './styles';
 import {useSelector} from 'react-redux';
 import NewsTile from '../../components/NewsTile';
+import ErrorMessage from '../../components/ErrorMessage';
+import {getNationalNews} from '../../redux/features/newsSlice';
+import Loading from '../../components/Loading';
 
 const NationalNews = ({navigation}) => {
-  const {nationalNewsResults} = useSelector(state => state.news);
+  const {nationalNewsResults, nationalNewsResultsFailed, loading} = useSelector(
+    state => state.news,
+  );
+
+  const Retry = () => {
+    dispatch(getNationalNews());
+  };
 
   const renderItem = ({item}) => (
     <NewsTile
@@ -18,11 +27,17 @@ const NationalNews = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={nationalNewsResults}
-        keyExtractor={(_, index) => index.toString()}
-        renderItem={renderItem}
-      />
+      {loading ? (
+        <Loading />
+      ) : nationalNewsResultsFailed ? (
+        <ErrorMessage text={nationalNewsResultsFailed} onPress={Retry} />
+      ) : (
+        <FlatList
+          data={nationalNewsResults}
+          keyExtractor={(_, index) => index.toString()}
+          renderItem={renderItem}
+        />
+      )}
     </View>
   );
 };

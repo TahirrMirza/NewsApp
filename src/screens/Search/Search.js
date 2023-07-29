@@ -4,10 +4,12 @@ import {View, Text, StyleSheet} from 'react-native';
 import styles from './styles';
 import SearchBar from '../../components/SearchBar';
 import Seperator from '../../components/Seperator';
+import Header from '../../components/Header';
 
 const Search = () => {
   return (
     <View style={styles.container}>
+      <Header />
       <Seperator />
       <Text>Search</Text>
       <Seperator />

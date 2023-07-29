@@ -9,6 +9,7 @@ import VideoIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import Video from '../../screens/Video/Video';
 import Search from '../../screens/Search/Search';
+import {StyleSheet} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,10 +24,7 @@ const BottomTabStack = () => {
       }}>
       <Tab.Screen
         options={{
-          tabBarLabelStyle: {
-            color: colors.black,
-            bottom: 10,
-          },
+          tabBarLabelStyle: styles.tabBarLabelStyle,
           tabBarIcon: () => <HomeIcon name="home" size={20} />,
         }}
         name={HOME}
@@ -34,11 +32,7 @@ const BottomTabStack = () => {
       />
       <Tab.Screen
         options={{
-          tabBarLabel: 'Video',
-          tabBarLabelStyle: {
-            color: colors.black,
-            bottom: 10,
-          },
+          tabBarLabelStyle: styles.tabBarLabelStyle,
           tabBarIcon: () => <VideoIcon name="playcircleo" size={20} />,
         }}
         name={VIDEO}
@@ -46,11 +40,7 @@ const BottomTabStack = () => {
       />
       <Tab.Screen
         options={{
-          tabBarLabel: 'Search',
-          tabBarLabelStyle: {
-            color: colors.black,
-            bottom: 10,
-          },
+          tabBarLabelStyle: styles.tabBarLabelStyle,
           tabBarIcon: () => <FeatherIcon name="search" size={20} />,
         }}
         name={SEARCH}
@@ -59,5 +49,12 @@ const BottomTabStack = () => {
     </Tab.Navigator>
   );
 };
+
+const styles = StyleSheet.create({
+  tabBarLabelStyle: {
+    color: colors.black,
+    bottom: 10,
+  },
+});
 
 export default BottomTabStack;

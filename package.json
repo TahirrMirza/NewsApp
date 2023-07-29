@@ -19,6 +19,7 @@
     "adb-reverse": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
+    "@react-native-community/netinfo": "^9.4.1",
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/material-top-tabs": "^6.6.3",
     "@react-navigation/native": "^6.1.7",
